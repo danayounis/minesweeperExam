@@ -1,0 +1,157 @@
+body{
+    background: #eeeeee;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+.title{
+    text-align: center;
+}
+.clearFix{
+    clear: both;
+}
+#minesWrapper{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    background: #eeeeee;
+    border: 1px solid #000000;
+}
+.cell{
+    background: #eeeeee;
+    width:28px;
+    height:28px;
+    float: left;
+    border: 1px groove;
+}
+.cell.mine{
+    background: url(mine.svg);
+    background-size: 28px 28px;
+    background-position: 0 2px;
+}
+
+.cell.closed, .cell.closed.mine{
+    background: #bdbdbd;
+    float: left;
+    border-color:#ffffff;
+}
+
+.cell.closed:hover{
+    background: #d4d4d4;
+    float: left;
+    border-color:#e5ffef;
+    cursor: hand;
+}
+
+.cell.closed.flagged{
+    background: url(flag.svg) #bdbdbd;
+    background-size: 30px 30px;
+    background-position: 0 1px
+}
+
+.cell.closed.flagged:hover{
+    background: url(flag.svg) #d4d4d4;
+    background-size: 30px 30px;
+    background-position: 0 1px
+}
+
+
+.cell.closed .number{
+    display: none;
+}
+
+.cell .number{
+    margin: 5px auto;
+    text-align: center;
+    color: #009688;
+    font-weight: bold;
+    cursor: default;
+}
+.controls{
+    float: none;
+    margin: 30px auto 5px;
+    width:400px;
+
+}
+
+.control{
+    position: relative;
+    float: left;
+    margin: 0 2px;
+}
+.control:hover, .control.active{
+    background-color: #c1c1c1;
+}
+.control.active{
+    cursor: default;
+}
+
+
+.controls>:first-child{
+    margin-left: 103px;
+}
+
+.restart{
+    background: url(smile.svg);
+    background-size: 35px 41px;
+    background-position: -4px -2px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.restart.scared{
+    background: url(scared.svg);
+    background-size: 35px 41px;
+    background-position: -4px -2px;
+}
+
+.restart.lost{
+    background: url(dazed.svg);
+    background-size: 35px 41px;
+    background-position: -4px -2px;
+}
+.difficulty{
+    margin-right: 0px;
+}
+.beginner{
+    background: url(beginner.svg);
+    background-size: 35px 41px;
+    background-position: -4px -2px;
+    cursor: pointer;
+}
+.intermediate{
+    background: url(intermediate.svg);
+    background-size: 35px 41px;
+    background-position: -4px -2px;
+    cursor: pointer;
+}
+.advanced{
+    background: url(advanced.svg);
+    background-size: 35px 41px;
+    background-position: -4px -2px;
+    cursor: pointer;
+}
+.tip{
+    width: 20px;
+    position: absolute;
+    right: -2px;
+    top: -10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    color: #009688;
+    background-color: #eeeeee;
+}
+.levels{
+    background: url(level-0.svg);
+    background-size: 35px 41px;
+    background-position: -6px -2px;
+    cursor: pointer;
+}
+.mined{
+  background-color: rgb(255, 109, 111) !important;
+}
